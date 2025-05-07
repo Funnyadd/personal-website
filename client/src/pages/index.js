@@ -13,9 +13,12 @@ import University from "../components/University";
 import Layout from "../components/layout";
 import PageRevealer from "../components/PageRevealer";
 import Seo from "../components/seo";
+import SomethingBrokePage from "./somethingBroke";
 import { QUERY } from "../data/data";
  
 const Index = () => {
+    return <SomethingBrokePage />
+
     // Injects vercel's analytics
     inject();
 
@@ -73,15 +76,7 @@ const Index = () => {
     }
 
     if (error) {
-        return (
-            <>
-                <Seo/>
-                <div>Something broke...</div>
-                {error.graphQLErrors.map(({ message }, index) => (
-                    <p key={index}>{message}</p>
-                ))}
-            </>
-        )
+        return <SomethingBrokePage />
     }
 
     const global = data.global
