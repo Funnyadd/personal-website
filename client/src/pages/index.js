@@ -17,8 +17,6 @@ import SomethingBrokePage from "./somethingBroke";
 import { QUERY } from "../data/data";
  
 const Index = () => {
-    return <SomethingBrokePage />
-
     // Injects vercel's analytics
     inject();
 
