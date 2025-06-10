@@ -61,7 +61,8 @@ For more information please feel free to contact me with my information provided
 
     ```shell
     STRAPI_TOKEN=
-    CONTACT_INFO_RECEIVE_EMAIL=
+    GATSBY_STRAPI_TOKEN= # Should be the same as STRAPI_TOKEN
+    GATSBY_CONTACT_INFO_RECEIVE_EMAIL=
     GATSBY_STRAPI_URL=
     ```
 
