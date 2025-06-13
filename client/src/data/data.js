@@ -124,7 +124,7 @@ export const QUERY = (locale) => {
                     expectedGraduationDateTitle
                     schoolName
                     schoolNameTitle
-                    semesters(pagination: { limit: 100, start: 0 } }) {
+                    semesters(pagination: { limit: 100, start: 0 }) {
                         number
                         title
                         activeSemesterTitle
