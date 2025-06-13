@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import logo from "../../images/personal-logo.png"
 import * as React from "react"
 

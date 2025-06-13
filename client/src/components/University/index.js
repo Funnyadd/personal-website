@@ -49,7 +49,7 @@ const University = (props) => {
                                 index={index}
                                 activeSemester={activeSemester}
                                 data={s}
-                                isLastSemester={s.number === bachelorData.semesters.length.toString()} />
+                                isLastSemester={s.number === (bachelorData.semesters.length - 1).toString()} />
                         )}
                     </SemesterAccordion>
                 </AnimationContainer>
