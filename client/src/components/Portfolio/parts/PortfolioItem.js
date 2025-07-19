@@ -1,5 +1,5 @@
 import React from "react"
-// import Tilt from "react-parallax-tilt"
+import Tilt from "react-parallax-tilt"
 import styled, { keyframes } from "styled-components"
 import RevealContent from "../../RevealContent"
 import DesktopContent from "./DesktopContent.js"
@@ -26,15 +26,15 @@ class PortfolioItem extends React.Component {
             vertical-align: middle;
             
             @media (max-width: 1400px) {
-                height: 90%;
+                height: 530px;
             }
 
             @media (max-width: 1200px) {
-                height: 80%;
+                height: 440px;
             }
 
             @media (max-width: 1024px) {
-                height: 400px;
+                height: 500px;
             }
         `
         if (this.props.type === "slider") {
@@ -124,16 +124,19 @@ class PortfolioItem extends React.Component {
                 }
             }
 
-            @media (max-width: 1024px) {
-                min-height: 300px;
-                max-height: 400px;
+            @media (max-width: 1400px) {
+                height: 90%;
+            }
+
+            @media (max-width: 1200px) {
+                height: 80%;
             }
         `
 
         if (this.props.type === "slider") {
             return (
-                <a href={this.props.link} target="_blank" rel="noopener noreferrer" aria-label="Portfolio Link">
-                    {/* <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1}> */}
+                <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1}>
+                    <a href={this.props.link} target="_blank" rel="noopener noreferrer" aria-label="Portfolio Link">
                         <Item className="blue-shadow">
                             {this.showImage()}
                             <MobileContent>
@@ -144,13 +147,13 @@ class PortfolioItem extends React.Component {
                             </MobileContent>
                             <DesktopContent text={this.props.text} category={this.props.category} ref={cd => (this.child = cd)} type={this.props.type} />
                         </Item>
-                    {/* </Tilt> */}
-                </a>
+                    </a>
+                </Tilt>
             )
         } else {
             return (
-                <a href={this.props.link} target="_blank" rel="noopener noreferrer" aria-label="Portfolio Link">
-                    {/* <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1}> */}
+                <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1}>
+                    <a href={this.props.link} target="_blank" rel="noopener noreferrer" aria-label="Portfolio Link">
                         <Item className={`${this.props.index % 2 === 0 ? "move-up" : "move-down"}`} id={`portfolio-item-${this.props.index}`}>
                             {this.showImage()}
                             <MobileContent>
@@ -161,8 +164,8 @@ class PortfolioItem extends React.Component {
                             </MobileContent>
                             <DesktopContent text={this.props.text} category={this.props.category} ref={cd => (this.child = cd)} type={this.props.type} />
                         </Item>
-                    {/* </Tilt> */}
-                </a>
+                    </a>
+                </Tilt>
             )
         }
     }

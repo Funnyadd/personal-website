@@ -6,39 +6,51 @@ import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 import AnimatedHeading from "../AnimatedHeading/index.js"
 import AnimationContainer from "../AnimationContainer"
-import { PortfolioContainer } from "./PortfolioSection"
+import { PortfolioContainer, Arrow } from "./PortfolioSection"
 import PortfolioItem from "./parts/PortfolioItem.js"
 
 const Portfolio = (props) => {
     const strapiMyProject = props.data
+
+    const PrevArrow = ({ onClick }) => (
+        <Arrow style={{ left: "-30px" }} onClick={onClick}>
+            &#8249;
+        </Arrow>
+    )
+
+    const NextArrow = ({ onClick }) => (
+        <Arrow style={{ right: "-30px" }} onClick={onClick}>
+            &#8250;
+        </Arrow>
+    )
 
     const settings = {
         dots: true,
         swipe: true,
         infinite: true,
         speed: 500,
-        slidesToScroll: 2,
-        arrows: false,
+        slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 10000,
-        loop: true,
         slidesToShow: 3,
+        arrows: true,
+        pauseOnHover: true,
+        prevArrow: <PrevArrow />,
+        nextArrow: <NextArrow />,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1,
                 },
             },
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
+                }
+            }
+        ]
     }
 
     return (
