@@ -3,38 +3,39 @@
   "private": true,
   "description": "Strapi back-end of Adam Mihajlovic's personal website",
   "main": "server.js",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "author": "Adam Mihajlovic <mihajlovicadam@gmail.com>",
   "dependencies": {
-    "@strapi/plugin-graphql": "^5.8.0",
-    "@strapi/plugin-users-permissions": "5.8.0",
-    "@strapi/provider-upload-cloudinary": "^5.8.0",
-    "@strapi/strapi": "5.8.0",
-    "@strapi/utils": "^5.8.0",
+    "@strapi/plugin-graphql": "5.18.1",
+    "@strapi/plugin-users-permissions": "5.18.1",
+    "@strapi/provider-upload-cloudinary": "5.18.1",
+    "@strapi/strapi": "5.18.1",
+    "@strapi/utils": "5.18.1",
     "babel-eslint": "^10.1.0",
     "fs-extra": "^11.3.0",
     "lodash.set": "^4.3.2",
-    "mime-types": "^2.1.35",
-    "pg": "^8.13.1",
+    "mime-types": "^3.0.1",
+    "pg": "^8.16.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.2",
+    "react-router-dom": "^6.30.1",
     "strapi-plugin-email-designer-5": "^0.0.7",
     "strapi-provider-email-resend": "^1.0.4",
-    "styled-components": "^6.1.14"
+    "styled-components": "^6.1.19"
   },
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest"
   },
   "strapi": {
     "uuid": "cf230822-89e1-4ea6-bfa7-bad61cb64fa6",
     "template": "blog"
   },
   "engines": {
-    "node": ">=18.x.x <=22.x.x",
+    "node": ">=18.x.x",
     "npm": ">=8.0.0"
   },
   "license": "MIT"

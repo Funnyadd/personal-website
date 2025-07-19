@@ -88,6 +88,7 @@ class DesktopContent extends React.Component {
                 <>
                     <Heading>
                         <BaffleText
+                            key={this.state.show ? 'reveal' : 'hide'}
                             text={this.props.text}
                             revealDuration={1000}
                             revealDelay={0}
@@ -95,6 +96,7 @@ class DesktopContent extends React.Component {
                     </Heading>
                     <SubHeading>
                         <BaffleText
+                            key={this.state.show ? 'reveal' : 'hide'}
                             text={this.props.category}
                             revealDuration={1000}
                             revealDelay={0}
