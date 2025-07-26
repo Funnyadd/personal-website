@@ -9,12 +9,12 @@
 
 Personal Website made to show my work resume in a more beautiful format. It uses the **Gatsby** framework for the frontend which is based on react but with the use of styled-components. For the backend, it's using **Strapi** to manage the content used in this website along with **Cloudinary** to manage media and **Postgres** for the database.
 
-The frontend of the website is currently hosted on [vercel](https://vercel.com/docs) and the backend is hosted on a home server that can be reached via HTTPS protocol. To take a look at this magnificent website, go to [adammihajlovic.ca](adammihajlovic.ca).
+The frontend of the website is currently hosted on [vercel](https://vercel.com/docs) and the backend is hosted on a home server that can be reached via HTTPS protocol. To take a look at this magnificent website, go to [adammihajlovic.ca](https://adammihajlovic.ca).
 
-The **Strapi** backend is hosted from home on [home.adammihajlovic.ca/admin](home.adammihajlovic.ca/admin) in order to make changes wherever I am.\
+The **Strapi** backend is hosted from home on [home.adammihajlovic.ca/admin](https://home.adammihajlovic.ca/admin) in order to make changes wherever I am.\
 (Needs a password for access by the way :wink:)
 
-For more information please feel free to contact me with my contact information provided on the website: [adammihajlovic.ca](adammihajlovic.ca)
+For more information please feel free to contact me with my contact information provided on the website and scroll to the bottom: [adammihajlovic.ca](https://adammihajlovic.ca)
 
 ## 🚀 Quick start (To run this locally)
 
