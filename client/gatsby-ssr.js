@@ -11,3 +11,14 @@ const client = new ApolloClient({
 })
 
 export const wrapRootElement = ({ element }) => <ApolloProvider client={client}>{element}</ApolloProvider>
+
+export const onRenderBody = ({ setHeadComponents }) => {
+  setHeadComponents([
+    <title key="fallback-title">Adam Mihajlovic</title>,
+    <meta
+      key="fallback-desc"
+      name="description"
+      content="Portfolio and projects by Adam Mihajlovic."
+    />,
+  ])
+}
